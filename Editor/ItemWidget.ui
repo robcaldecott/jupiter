@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemWidget</class>
+ <widget class="QWidget" name="ItemWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>281</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>281</width>
+        <height>412</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
+       <property name="leftMargin">
+        <number>9</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>&amp;Text:</string>
+         </property>
+         <property name="buddy">
+          <cstring>text</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="text"/>
+          </item>
+          <item>
+           <widget class="QToolButton" name="textButton">
+            <property name="toolTip">
+             <string>Edit the text.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Editor.qrc">
+              <normaloff>:/images/pencil.png</normaloff>:/images/pencil.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="removeText">
+            <property name="toolTip">
+             <string>Clear the text.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="Editor.qrc">
+              <normaloff>:/images/erase.png</normaloff>:/images/erase.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>F&amp;ont:</string>
+         </property>
+         <property name="buddy">
+          <cstring>font</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QFontComboBox" name="font"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Text &amp;color:</string>
+         </property>
+         <property name="buddy">
+          <cstring>textColor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="ColorComboBox" name="textColor"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>&amp;Back color:</string>
+         </property>
+         <property name="buddy">
+          <cstring>backColor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="ColorComboBox" name="backColor"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>&amp;Horz. alignment</string>
+         </property>
+         <property name="buddy">
+          <cstring>horzAlignment</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="horzAlignment"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>&amp;Vert. alignment:</string>
+         </property>
+         <property name="buddy">
+          <cstring>vertAlignment</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QComboBox" name="vertAlignment"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>&amp;Border width:</string>
+         </property>
+         <property name="buddy">
+          <cstring>borderWidth</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QWidget" name="widget" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QSpinBox" name="borderWidth"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>129</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Bo&amp;rder color:</string>
+         </property>
+         <property name="buddy">
+          <cstring>borderColor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="ColorComboBox" name="borderColor"/>
+       </item>
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>&amp;Picture:</string>
+         </property>
+         <property name="buddy">
+          <cstring>picture</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="picture">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="removePicture">
+            <property name="toolTip">
+             <string>Remove the current picture.</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Editor.qrc">
+              <normaloff>:/images/erase.png</normaloff>:/images/erase.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="11" column="0">
+        <widget class="QLabel" name="pictureModeLabel">
+         <property name="text">
+          <string>Picture &amp;mode:</string>
+         </property>
+         <property name="buddy">
+          <cstring>pictureMode</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
+        <widget class="QComboBox" name="pictureMode">
+         <item>
+          <property name="text">
+           <string>Keep Aspect Ratio</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Stretch</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Font &amp;height:</string>
+         </property>
+         <property name="buddy">
+          <cstring>fontHeight</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="fontHeight">
+         <item>
+          <property name="text">
+           <string>Normal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Stretched</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Padding:</string>
+         </property>
+         <property name="buddy">
+          <cstring>padding</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QDoubleSpinBox" name="padding">
+            <property name="maximum">
+             <double>10.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.250000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>123</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="12" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Auto lines:</string>
+         </property>
+         <property name="buddy">
+          <cstring>autoLines</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1">
+        <widget class="QCheckBox" name="autoLines">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>First line bold:</string>
+         </property>
+         <property name="buddy">
+          <cstring>firstLineBold</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QCheckBox" name="firstLineBold">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>Stripes:</string>
+         </property>
+         <property name="buddy">
+          <cstring>stripes</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1">
+        <widget class="QCheckBox" name="stripes">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Stripe color:</string>
+         </property>
+         <property name="buddy">
+          <cstring>stripeColor</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1">
+        <widget class="ColorComboBox" name="stripeColor"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorComboBox</class>
+   <extends>QComboBox</extends>
+   <header>ColorComboBox.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>text</tabstop>
+  <tabstop>textButton</tabstop>
+  <tabstop>removeText</tabstop>
+  <tabstop>font</tabstop>
+  <tabstop>fontHeight</tabstop>
+  <tabstop>textColor</tabstop>
+  <tabstop>backColor</tabstop>
+  <tabstop>horzAlignment</tabstop>
+  <tabstop>vertAlignment</tabstop>
+  <tabstop>borderWidth</tabstop>
+  <tabstop>borderColor</tabstop>
+  <tabstop>padding</tabstop>
+  <tabstop>picture</tabstop>
+  <tabstop>removePicture</tabstop>
+  <tabstop>pictureMode</tabstop>
+  <tabstop>autoLines</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Editor.qrc"/>
+ </resources>
+ <connections/>
+</ui>

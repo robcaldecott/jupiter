@@ -1,0 +1,13 @@
+[REPORT]
+[FONT=Courier New]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/210px-Flag_of_the_United_Kingdom.svg.png,0,1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg.png,-1,1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/210px-Flag_of_Canada.svg.png,-2,1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/210px-Flag_of_Ireland.svg.png,0,-1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/184px-Flag_of_Mexico.svg.png,-1,-1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/210px-Flag_of_Australia.svg.png,-2,-1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/175px-Flag_of_Germany.svg.png,0,-2,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/158px-Flag_of_Italy.svg.png,-1,-2,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/200px-Flag_of_France.svg.png,-2,-2,15,5]
+[REPORT]
+FLAGS OF THE UK, USA, CANADA, IRELAND, MEXICO, AUSTRALIA, GERMANY, ITALY AND FRANCE.

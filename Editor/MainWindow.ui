@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Editor.qrc">
+    <normaloff>:/images/Jupiter.png</normaloff>:/images/Jupiter.png</iconset>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>693</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpenURL"/>
+    <addaction name="actionReload"/>
+    <addaction name="actionOpenPrintData"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="actionSaveAsPDF"/>
+    <addaction name="separator"/>
+    <addaction name="actionSend"/>
+    <addaction name="separator"/>
+    <addaction name="actionPagePreview"/>
+    <addaction name="actionPageSetup"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionCut"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelectAll"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect"/>
+    <addaction name="actionPaint"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionProperties"/>
+    <addaction name="separator"/>
+    <addaction name="actionFullScreen"/>
+    <addaction name="actionGrid"/>
+    <addaction name="separator"/>
+    <addaction name="actionMargins"/>
+    <addaction name="actionPrintData"/>
+    <addaction name="separator"/>
+    <addaction name="actionActualSize"/>
+    <addaction name="actionFitWidth"/>
+    <addaction name="actionFitHeight"/>
+    <addaction name="separator"/>
+    <addaction name="actionFirstPage"/>
+    <addaction name="actionPreviousPage"/>
+    <addaction name="actionNextPage"/>
+    <addaction name="actionLastPage"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>F&amp;ormat</string>
+    </property>
+    <widget class="QMenu" name="menuAlignment">
+     <property name="title">
+      <string>&amp;Alignment</string>
+     </property>
+     <addaction name="actionAlignLeft"/>
+     <addaction name="actionAlignRight"/>
+     <addaction name="actionAlignTop"/>
+     <addaction name="actionAlignBottom"/>
+    </widget>
+    <widget class="QMenu" name="menuSize">
+     <property name="title">
+      <string>&amp;Size</string>
+     </property>
+     <widget class="QMenu" name="menuWidth">
+      <property name="title">
+       <string>&amp;Width</string>
+      </property>
+      <addaction name="actionShrinkWidth"/>
+      <addaction name="actionGrowWidth"/>
+      <addaction name="actionPageWidth"/>
+     </widget>
+     <widget class="QMenu" name="menuHeight">
+      <property name="title">
+       <string>&amp;Height</string>
+      </property>
+      <addaction name="actionShrinkHeight"/>
+      <addaction name="actionGrowHeight"/>
+      <addaction name="actionPageHeight"/>
+     </widget>
+     <widget class="QMenu" name="menuBoth">
+      <property name="title">
+       <string>&amp;Both</string>
+      </property>
+      <addaction name="actionShrinkBoth"/>
+      <addaction name="actionGrowBoth"/>
+      <addaction name="actionPageBoth"/>
+     </widget>
+     <addaction name="menuWidth"/>
+     <addaction name="menuHeight"/>
+     <addaction name="menuBoth"/>
+    </widget>
+    <addaction name="menuAlignment"/>
+    <addaction name="menuSize"/>
+    <addaction name="separator"/>
+    <addaction name="actionMoveForwards"/>
+    <addaction name="actionMoveBackwards"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionExit"/>
+   <addaction name="separator"/>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionOpenPrintData"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAsPDF"/>
+   <addaction name="separator"/>
+   <addaction name="actionPagePreview"/>
+   <addaction name="actionPrint"/>
+   <addaction name="separator"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionDelete"/>
+   <addaction name="separator"/>
+   <addaction name="actionGrid"/>
+   <addaction name="separator"/>
+   <addaction name="actionFirstPage"/>
+   <addaction name="actionPreviousPage"/>
+   <addaction name="actionNextPage"/>
+   <addaction name="actionLastPage"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="objectToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSelect"/>
+   <addaction name="actionPaint"/>
+  </widget>
+  <widget class="QDockWidget" name="propertyWidget">
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>Properties</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="propertyWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="formatToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBold"/>
+   <addaction name="actionItalic"/>
+   <addaction name="separator"/>
+   <addaction name="actionLeft"/>
+   <addaction name="actionCenter"/>
+   <addaction name="actionRight"/>
+   <addaction name="separator"/>
+   <addaction name="actionBox"/>
+   <addaction name="separator"/>
+   <addaction name="actionMoveForwards"/>
+   <addaction name="actionMoveBackwards"/>
+   <addaction name="separator"/>
+   <addaction name="actionAlignLeft"/>
+   <addaction name="actionAlignRight"/>
+   <addaction name="actionAlignTop"/>
+   <addaction name="actionAlignBottom"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/open.png</normaloff>:/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open an existing form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/new.png</normaloff>:/images/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/save.png</normaloff>:/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="text">
+    <string>Save &amp;As...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the form with a different name.</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/printer.png</normaloff>:/images/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Print...</string>
+   </property>
+   <property name="statusTip">
+    <string>Print the form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionSend">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/email.png</normaloff>:/images/email.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Send...</string>
+   </property>
+   <property name="statusTip">
+    <string>Send the form as a PDF attachment using your email application.</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit the application.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/about.png</normaloff>:/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About...</string>
+   </property>
+   <property name="statusTip">
+    <string>Display program version and copyrighr information.</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionPageSetup">
+   <property name="text">
+    <string>Pa&amp;ge Setup...</string>
+   </property>
+   <property name="statusTip">
+    <string>Configure the page settings.</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy the selected objects to the clipboard.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/paste.png</normaloff>:/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste objects from the clipboard onto the form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionSelectAll">
+   <property name="text">
+    <string>Select &amp;All</string>
+   </property>
+   <property name="statusTip">
+    <string>Select all the objects on this form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/cut.png</normaloff>:/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;ut</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy the currently selected objects to the clipboard and remove them from the form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/erase.png</normaloff>:/images/erase.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete the selected objects from the form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/monitor.png</normaloff>:/images/monitor.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Full Screen</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the editor using all of the available screen space.</string>
+   </property>
+  </action>
+  <action name="actionOpenURL">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/download.png</normaloff>:/images/download.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open &amp;URL...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a form located on an FTP or HTTP server.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionOpenPrintData">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/database.png</normaloff>:/images/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Print &amp;Data...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a print file to use when designing this form.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionMargins">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Margins</string>
+   </property>
+   <property name="statusTip">
+    <string>Toggle the display of the page margins.</string>
+   </property>
+  </action>
+  <action name="actionGrid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/grid_dot.png</normaloff>:/images/grid_dot.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Grid</string>
+   </property>
+   <property name="statusTip">
+    <string>Toggle the display of the grid.</string>
+   </property>
+  </action>
+  <action name="actionSaveAsPDF">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/doc_pdf.png</normaloff>:/images/doc_pdf.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As PD&amp;F...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the form as a PDF file.</string>
+   </property>
+  </action>
+  <action name="actionPrintData">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Print &amp;Data</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the sample print data for this form.</string>
+   </property>
+  </action>
+  <action name="actionSelect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/cursor.png</normaloff>:/images/cursor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+   <property name="iconText">
+    <string>Select</string>
+   </property>
+   <property name="toolTip">
+    <string>Select</string>
+   </property>
+   <property name="statusTip">
+    <string>Use the mouse to select or resize form objects.</string>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="actionPaint">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/paintcan.png</normaloff>:/images/paintcan.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Paint</string>
+   </property>
+   <property name="statusTip">
+    <string>Paint a formatted block on the form.</string>
+   </property>
+  </action>
+  <action name="actionAlignLeft">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_aling_left.png</normaloff>:/images/shape_aling_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Left</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Left</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Left</string>
+   </property>
+  </action>
+  <action name="actionAlignRight">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_aling_right.png</normaloff>:/images/shape_aling_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Right</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Right</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Right</string>
+   </property>
+  </action>
+  <action name="actionAlignTop">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_aling_top.png</normaloff>:/images/shape_aling_top.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Top</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Top</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionAlignBottom">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_aling_bottom.png</normaloff>:/images/shape_aling_bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Bottom</string>
+   </property>
+   <property name="toolTip">
+    <string>Align Bottom</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+  <action name="actionProperties">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/application_edit.png</normaloff>:/images/application_edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Properties...</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the properties toolbox.</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Return</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/text_bold.png</normaloff>:/images/text_bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/text_italic.png</normaloff>:/images/text_italic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionLeft">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/text_align_left.png</normaloff>:/images/text_align_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Left</string>
+   </property>
+   <property name="toolTip">
+    <string>Left</string>
+   </property>
+   <property name="statusTip">
+    <string>Left align the selected object text.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionCenter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/text_align_center.png</normaloff>:/images/text_align_center.png</iconset>
+   </property>
+   <property name="text">
+    <string>Center</string>
+   </property>
+   <property name="toolTip">
+    <string>Center</string>
+   </property>
+   <property name="statusTip">
+    <string>Center the selected object text.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionRight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/text_align_right.png</normaloff>:/images/text_align_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Right</string>
+   </property>
+   <property name="toolTip">
+    <string>Right</string>
+   </property>
+   <property name="statusTip">
+    <string>Right align the selected object text.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionBox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/box.png</normaloff>:/images/box.png</iconset>
+   </property>
+   <property name="text">
+    <string>Box</string>
+   </property>
+   <property name="toolTip">
+    <string>Box</string>
+   </property>
+   <property name="statusTip">
+    <string>Draw a box around the selected objects.</string>
+   </property>
+  </action>
+  <action name="actionMoveForwards">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_move_forwards.png</normaloff>:/images/shape_move_forwards.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move Forwards</string>
+   </property>
+   <property name="toolTip">
+    <string>Move Forwards</string>
+   </property>
+   <property name="statusTip">
+    <string>Move the selected object to the top of the z-order.</string>
+   </property>
+  </action>
+  <action name="actionMoveBackwards">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/shape_move_backwards.png</normaloff>:/images/shape_move_backwards.png</iconset>
+   </property>
+   <property name="text">
+    <string>Move Backwards</string>
+   </property>
+   <property name="toolTip">
+    <string>Move Backwards</string>
+   </property>
+   <property name="statusTip">
+    <string>Move the selected object to the bottom of the z-order.</string>
+   </property>
+  </action>
+  <action name="actionPagePreview">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/preview.png</normaloff>:/images/preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print Pre&amp;view...</string>
+   </property>
+   <property name="statusTip">
+    <string>Display a preview of the printed output.</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/arrow_refresh.png</normaloff>:/images/arrow_refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reload</string>
+   </property>
+   <property name="statusTip">
+    <string>Reload the form from disk.</string>
+   </property>
+  </action>
+  <action name="actionActualSize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/page_white_text.png</normaloff>:/images/page_white_text.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Actual Size</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the page at actual size.</string>
+   </property>
+   <property name="shortcut">
+    <string>/</string>
+   </property>
+  </action>
+  <action name="actionFitWidth">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/left-right.png</normaloff>:/images/left-right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit &amp;Width</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom to fit the width of the page.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionFitHeight">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/up-down.png</normaloff>:/images/up-down.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit &amp;Height</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom so the entire page is visible.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionShrinkWidth">
+   <property name="text">
+    <string>Shrink To &amp;Smallest</string>
+   </property>
+  </action>
+  <action name="actionGrowWidth">
+   <property name="text">
+    <string>&amp;Grow To Largest</string>
+   </property>
+  </action>
+  <action name="actionPageWidth">
+   <property name="text">
+    <string>&amp;Page</string>
+   </property>
+  </action>
+  <action name="actionShrinkHeight">
+   <property name="text">
+    <string>&amp;Shrink To Smallest</string>
+   </property>
+  </action>
+  <action name="actionGrowHeight">
+   <property name="text">
+    <string>&amp;Grow To Largest</string>
+   </property>
+  </action>
+  <action name="actionPageHeight">
+   <property name="text">
+    <string>&amp;Page</string>
+   </property>
+  </action>
+  <action name="actionShrinkBoth">
+   <property name="text">
+    <string>&amp;Shrink To Smallest</string>
+   </property>
+  </action>
+  <action name="actionGrowBoth">
+   <property name="text">
+    <string>&amp;Grow To Largest</string>
+   </property>
+  </action>
+  <action name="actionPageBoth">
+   <property name="text">
+    <string>Page</string>
+   </property>
+  </action>
+  <action name="actionFirstPage">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/first.png</normaloff>:/images/first.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;First Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the form using data from the first page.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Home</string>
+   </property>
+  </action>
+  <action name="actionPreviousPage">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Previous Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the form using data from the previous page.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgUp</string>
+   </property>
+  </action>
+  <action name="actionNextPage">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/forward.png</normaloff>:/images/forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Next Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the form using data from the next page.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgDown</string>
+   </property>
+  </action>
+  <action name="actionLastPage">
+   <property name="icon">
+    <iconset resource="Editor.qrc">
+     <normaloff>:/images/last.png</normaloff>:/images/last.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Last Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the form using data from the last page.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+End</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Editor.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

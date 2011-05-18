@@ -1,0 +1,4 @@
+Normal, <b>bold</b>, <i>italic</i>, <u>underline</u>, <s>strikethrough</s>, back to normal.
+<b><i><u><s>This is a combination of all available formats.</b></i></u></s>
+<b><u>This text is bold and underlined.</b></u>
+This is <s>Deleted text.</s>

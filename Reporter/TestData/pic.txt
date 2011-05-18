@@ -1,0 +1,17 @@
+[REPORT]
+[FONT=Courier New]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/210px-Flag_of_the_United_Kingdom.svg.png,0,1,15,5]
+[PICTURE=http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg.png,65,1,15,5]
+[REPORT]
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+
+
+                            <b>FLAGS OF THE UK AND USA</b>
+
+
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+TEST
+TEST
+TEST
+TEST
+TEST

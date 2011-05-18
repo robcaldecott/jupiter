@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>717</width>
+    <height>472</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Jupiter Reporter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ReporterViewer.qrc">
+    <normaloff>:/images/jupiter_reporter.png</normaloff>:/images/jupiter_reporter.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>717</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpenURL"/>
+    <addaction name="actionReload"/>
+    <addaction name="actionSaveAsPDF"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPageSetup"/>
+    <addaction name="separator"/>
+    <addaction name="actionEmail"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="menuToolbars">
+     <property name="title">
+      <string>&amp;Toolbars</string>
+     </property>
+     <addaction name="actionMainToolbar"/>
+     <addaction name="actionViewToolbar"/>
+     <addaction name="actionFontToolbar"/>
+    </widget>
+    <addaction name="menuToolbars"/>
+    <addaction name="actionStatusBar"/>
+    <addaction name="separator"/>
+    <addaction name="actionFirstPage"/>
+    <addaction name="actionPreviousPage"/>
+    <addaction name="actionNextPage"/>
+    <addaction name="actionLastPage"/>
+    <addaction name="separator"/>
+    <addaction name="actionSinglePage"/>
+    <addaction name="actionFacingPages"/>
+    <addaction name="actionAllPages"/>
+    <addaction name="separator"/>
+    <addaction name="actionPortrait"/>
+    <addaction name="actionLandscape"/>
+   </widget>
+   <widget class="QMenu" name="menuZoom">
+    <property name="title">
+     <string>&amp;Zoom</string>
+    </property>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="separator"/>
+    <addaction name="actionFitWidth"/>
+    <addaction name="actionFitHeight"/>
+    <addaction name="actionActualSize"/>
+   </widget>
+   <widget class="QMenu" name="menuFont">
+    <property name="title">
+     <string>F&amp;ont</string>
+    </property>
+    <widget class="QMenu" name="menuHeight">
+     <property name="title">
+      <string>&amp;Height</string>
+     </property>
+     <addaction name="action6LPI"/>
+     <addaction name="action8LPI"/>
+     <addaction name="action9LPI"/>
+    </widget>
+    <widget class="QMenu" name="menuWidth">
+     <property name="title">
+      <string>&amp;Width</string>
+     </property>
+     <addaction name="actionDefaultWidth"/>
+     <addaction name="separator"/>
+     <addaction name="action10CPI"/>
+     <addaction name="action12CPI"/>
+     <addaction name="action17CPI"/>
+    </widget>
+    <addaction name="actionBold"/>
+    <addaction name="actionColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionStripes"/>
+    <addaction name="actionStripeColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionStretchFont"/>
+    <addaction name="menuHeight"/>
+    <addaction name="menuWidth"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFont"/>
+   <addaction name="menuView"/>
+   <addaction name="menuZoom"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionExit"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionOpenURL"/>
+   <addaction name="actionSaveAsPDF"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrint"/>
+   <addaction name="actionPageSetup"/>
+   <addaction name="separator"/>
+   <addaction name="actionEmail"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopy"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="viewToolBar">
+   <property name="windowTitle">
+    <string>View</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFirstPage"/>
+   <addaction name="actionPreviousPage"/>
+   <addaction name="actionNextPage"/>
+   <addaction name="actionLastPage"/>
+   <addaction name="separator"/>
+   <addaction name="actionFitWidth"/>
+   <addaction name="actionFitHeight"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+  </widget>
+  <widget class="QToolBar" name="fontToolBar">
+   <property name="windowTitle">
+    <string>Font</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBold"/>
+   <addaction name="actionColor"/>
+   <addaction name="actionStripes"/>
+   <addaction name="actionStretchFont"/>
+   <addaction name="separator"/>
+   <addaction name="actionPortrait"/>
+   <addaction name="actionLandscape"/>
+  </widget>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit Jupiter Reporter.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/about.png</normaloff>:/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About...</string>
+   </property>
+   <property name="statusTip">
+    <string>Display version number and copyright information.</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/folder.png</normaloff>:/images/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a text print file.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/printer.png</normaloff>:/images/printer.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Print...</string>
+   </property>
+   <property name="statusTip">
+    <string>Print the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionSaveAsPDF">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/doc_pdf.png</normaloff>:/images/doc_pdf.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save As PDF...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the report as a PDF file.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionEmail">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/mail.png</normaloff>:/images/mail.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;mail...</string>
+   </property>
+   <property name="statusTip">
+    <string>Send an email with the report attached as a PDF.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/copy.png</normaloff>:/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy the text of the report to the clipboard.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionStripes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/text_align_justify.png</normaloff>:/images/text_align_justify.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Stripes</string>
+   </property>
+   <property name="statusTip">
+    <string>Toggle stripes on/off.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionPageSetup">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/PrintSetupHS.png</normaloff>:/images/PrintSetupHS.png</iconset>
+   </property>
+   <property name="text">
+    <string>Page &amp;Setup...</string>
+   </property>
+  </action>
+  <action name="actionFirstPage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/first.png</normaloff>:/images/first.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;First Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the first page of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Home</string>
+   </property>
+  </action>
+  <action name="actionPreviousPage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Previous Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the previous page of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgUp</string>
+   </property>
+  </action>
+  <action name="actionNextPage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/forward.png</normaloff>:/images/forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Next Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the next page of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgDown</string>
+   </property>
+  </action>
+  <action name="actionLastPage">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/last.png</normaloff>:/images/last.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Last Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the last page of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+End</string>
+   </property>
+  </action>
+  <action name="actionFitWidth">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/left-right.png</normaloff>:/images/left-right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit &amp;Width</string>
+   </property>
+   <property name="statusTip">
+    <string>Fit the report to the width of the window.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionFitHeight">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/up-down.png</normaloff>:/images/up-down.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit &amp;Height</string>
+   </property>
+   <property name="statusTip">
+    <string>Fit the report to the height of the window.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionSinglePage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>S&amp;ingle Page</string>
+   </property>
+   <property name="statusTip">
+    <string>Display one page at a time.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionFacingPages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/ArrangeSideBySideHS.png</normaloff>:/images/ArrangeSideBySideHS.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Facing Pages</string>
+   </property>
+   <property name="statusTip">
+    <string>Display facing pages.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionAllPages">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;All Pages</string>
+   </property>
+   <property name="statusTip">
+    <string>Display all pages in the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/zoomin.png</normaloff>:/images/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom &amp;In</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom into the report</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/zoomout.png</normaloff>:/images/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom &amp;Out</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom out of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionActualSize">
+   <property name="text">
+    <string>&amp;Actual Size</string>
+   </property>
+   <property name="statusTip">
+    <string>Display the report at 100% zoom.</string>
+   </property>
+   <property name="shortcut">
+    <string>/</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/font.png</normaloff>:/images/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Font...</string>
+   </property>
+   <property name="statusTip">
+    <string>Change the font used to display the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
+  </action>
+  <action name="actionPortrait">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/page_white_text.png</normaloff>:/images/page_white_text.png</iconset>
+   </property>
+   <property name="text">
+    <string>P&amp;ortrait</string>
+   </property>
+   <property name="statusTip">
+    <string>Switch to portrait orientation.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionLandscape">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/page_white_text_width.png</normaloff>:/images/page_white_text_width.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Landscape</string>
+   </property>
+   <property name="statusTip">
+    <string>Switch to landscape orientation.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="actionStretchFont">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/doc_resize.png</normaloff>:/images/doc_resize.png</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;tretch</string>
+   </property>
+   <property name="statusTip">
+    <string>Stretch the size of the font so it fills the page exactly.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/color_swatch_2.png</normaloff>:/images/color_swatch_2.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Color...</string>
+   </property>
+   <property name="statusTip">
+    <string>Chnage the color of the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="action6LPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;6 LPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font height of 6 lines-per-inch (12pt)</string>
+   </property>
+  </action>
+  <action name="action8LPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;8 LPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font height of 8 lines-per-inch (9pt).</string>
+   </property>
+  </action>
+  <action name="action17CPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1&amp;7 CPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font width of 17 characters-per-inch.</string>
+   </property>
+  </action>
+  <action name="actionDefaultWidth">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Default</string>
+   </property>
+   <property name="statusTip">
+    <string>Use the default font width.</string>
+   </property>
+  </action>
+  <action name="action12CPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1&amp;2 CPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font width of 12 characters-per-inch.</string>
+   </property>
+  </action>
+  <action name="action10CPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1&amp;0 CPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font width of 10 characters-per-inch.</string>
+   </property>
+  </action>
+  <action name="action9LPI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;9 LPI</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a font height of 8 lines-per-inch (8pt).</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/boldhs.png</normaloff>:/images/boldhs.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Bold</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a bold font.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionStripeColor">
+   <property name="text">
+    <string>Stripe &amp;Color...</string>
+   </property>
+   <property name="statusTip">
+    <string>Chnage the color used to display alternate stripes.</string>
+   </property>
+  </action>
+  <action name="actionLicensing">
+   <property name="text">
+    <string>&amp;Licensing...</string>
+   </property>
+  </action>
+  <action name="actionOpenURL">
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/Download.png</normaloff>:/images/Download.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open &amp;URL...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open a file located on an FTP or HTTP server.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="ReporterViewer.qrc">
+     <normaloff>:/images/Refresh.png</normaloff>:/images/Refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reload</string>
+   </property>
+   <property name="statusTip">
+    <string>Reload the report.</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionMainToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Main</string>
+   </property>
+  </action>
+  <action name="actionViewToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;View</string>
+   </property>
+  </action>
+  <action name="actionFontToolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Font</string>
+   </property>
+  </action>
+  <action name="actionStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Status Bar</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ReporterViewer.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

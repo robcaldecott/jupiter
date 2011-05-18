@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/about.png</file>
+        <file>images/copy.png</file>
+        <file>images/doc_pdf.png</file>
+        <file>images/exit.png</file>
+        <file>images/folder.png</file>
+        <file>images/mail.png</file>
+        <file>images/printer.png</file>
+        <file>images/text_linespacing.png</file>
+        <file>images/jupiter_reporter.png</file>
+        <file>images/ArrangeSideBySideHS.png</file>
+        <file>images/back.png</file>
+        <file>images/doc_resize.png</file>
+        <file>images/first.png</file>
+        <file>images/forward.png</file>
+        <file>images/last.png</file>
+        <file>images/left-right.png</file>
+        <file>images/page_white_text.png</file>
+        <file>images/page_white_text_width.png</file>
+        <file>images/PrintSetupHS.png</file>
+        <file>images/up-down.png</file>
+        <file>images/zoomin.png</file>
+        <file>images/zoomout.png</file>
+        <file>images/font.png</file>
+        <file>images/color_swatch_2.png</file>
+        <file>images/text_align_justify.png</file>
+        <file>images/boldhs.png</file>
+        <file>images/Download.png</file>
+        <file>images/Refresh.png</file>
+    </qresource>
+</RCC>
