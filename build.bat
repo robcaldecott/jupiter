@@ -6,4 +6,5 @@ qmake -r %CURDIR%\Jupiter.pro -spec win32-g++ CONFIG+=release
 mingw32-make -w release
 iscc %CURDIR%\Reporter\ReporterViewer\ReporterViewer.iss /O"."
 iscc %CURDIR%\Reporter\ReporterApp\ReporterApp.iss /O"."
+iscc %CURDIR%\Editor\Editor.iss /O"."
 cd %CURDIR%

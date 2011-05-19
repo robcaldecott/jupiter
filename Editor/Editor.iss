@@ -34,7 +34,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "..\..\Editor-build-desktop\Editor\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\Jupiter-build-desktop\Editor\release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: ".\readme.txt"; DestDir: "{app}"; Flags: isreadme
 Source: ".\samples\*.jform"; DestDir: "{app}\Samples"; Flags: ignoreversion
 Source: "{#QTDIR}\bin\mingwm10.dll"; DestDir: "{app}"; Flags: ignoreversion
