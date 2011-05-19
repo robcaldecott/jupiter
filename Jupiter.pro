@@ -2,6 +2,8 @@ TEMPLATE = subdirs
 CONFIG += ordered
 SUBDIRS = Licensing/LicensingLib \
 	Reporter \
-	Editor.pro
-	
-	
+	Shared \
+	JupiterLib \
+	Editor \
+	Tests
+
